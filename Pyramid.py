@@ -26,7 +26,9 @@
 
 # This is so concise and smol my god im a fucking genius.
 
-generate_characters = lambda char, number : ''.join([char for _ in range(number)])
+# Use a generator expression rather than a list comprehension because I don't really give a flying fuck to access the list again, it just
+# gets turned into a string immediately.
+generate_characters = lambda char, number : ''.join((char for _ in range(number)))
 
 def generate_pyramid(height):
     final_string = '\n'
@@ -37,6 +39,6 @@ def generate_pyramid(height):
     
     return final_string
 
-height = 50
+height = 15
 
 print(generate_pyramid(height))
