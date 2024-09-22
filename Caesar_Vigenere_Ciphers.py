@@ -57,7 +57,7 @@ def Vigenere(message, key, direction=CipherDirection.ENCRYPT):
 
 def GetUserInput():
     print(EscapeSequence.CYAN)
-    user_input = int(input())
+    user_input = input()
     print(EscapeSequence.DEFAULT_STYLE)
     return user_input
 
